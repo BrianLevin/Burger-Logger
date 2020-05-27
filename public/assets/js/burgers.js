@@ -8,13 +8,13 @@ $(function () {
 
         // Send the PUT request.
         $.ajax("/api/burger/" + id, {
-            type: "PUT",
+            type: "POST",
             
         }).then(
             function () {
                 console.log("changed burger to", devoured);
                 // Reload the page to get the updated list
-                location.reload();
+                //location.reload();
             }
         );
     });
