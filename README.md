@@ -12,3 +12,5 @@ In This assignment, we had to create  a burger logger with MYSQL, NODE, Express,
  -  Node
  - Express
  - Handlebars
+ 
+## Deployed application: https://burger-appp.herokuapp.com/
