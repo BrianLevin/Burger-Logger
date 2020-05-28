@@ -33,7 +33,7 @@ router.post("/api/burger/:id", function (req, res) {
     burger.updateOne({
         devoured: true,
     }, condition, function (result) {
-        console.log(result);
+        console.log(result.updateOne);
         if (result.changedRows == 0) {
             
             return res.json({id: result.updateOne})
