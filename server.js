@@ -1,18 +1,18 @@
-var express = require("express");
+var express = require("express"); //express server to help built the web application
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080; //server port to run site
 
 var app = express();
 
-app.use(express.static('public'));
+app.use(express.static('public')); //  the static file allows express to work
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // helpparse and read the data
 app.use(express.json());
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" })); 
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.

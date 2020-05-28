@@ -1,6 +1,6 @@
-var mysql = require('mysql');
+var mysql = require('mysql'); // my sql library in node
 
-var connection = mysql.createConnection({
+var connection = mysql.createConnection({ // connection to host
     host: 'edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     port: 3306,
     user: "b458jsrw5vr5rgc1",

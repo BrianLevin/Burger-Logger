@@ -1,4 +1,4 @@
-const orm = require('../config/orm.js');
+const orm = require('../config/orm.js'); // object relational mapping to map all the the table and rows using functions
 
 var burger = {
     selectAll(cb) {

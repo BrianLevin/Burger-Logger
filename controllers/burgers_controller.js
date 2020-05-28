@@ -1,10 +1,10 @@
-var burger = require('../models/burger.js');
+var burger = require('../models/burger.js'); //variables which wil hold the libraries
 var express = require('express');
 
-var router = express.Router();
+var router = express.Router(); // the router used
 
 
-router.get("/", function (req, res) {
+router.get("/", function (req, res) { //  bind the property to the function
     burger.selectAll(function (data) {
         var hbsObject = {
             burger: data
@@ -14,7 +14,7 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/api/burger", function (req, res) {
+router.post("/api/burger", function (req, res) { //
     burger.insertOne([
         "name", "devoured"
     ], [
@@ -25,12 +25,12 @@ router.post("/api/burger", function (req, res) {
     });
 });
 
-router.post("/api/burger/:id", function (req, res) {
+router.post("/api/burger/:id", function (req, res) { //load the data from the server
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    burger.updateOne({
+    burger.updateOne({ // data will be updated
         devoured: true,
     }, condition, function (result) {
         console.log(result.updateOne);

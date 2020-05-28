@@ -1,6 +1,6 @@
-const connection = require('./connection.js');
+const connection = require('./connection.js'); // connect to the connection folder
 
-var orm = {
+var orm = { //data which will be accessed using relationap databses
     selectAll: function (tableName, cb) {
         connection.query('SELECT * FROM ' + tableName, function (err, res) {
             if (err) {
@@ -11,7 +11,7 @@ var orm = {
         });
     },
 
-    insertOne: function (table, cols, vals, cb) {
+    insertOne: function (table, cols, vals, cb) { //function forinserting the data
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -33,7 +33,7 @@ var orm = {
 
     },
 
-    updateOne: function (table, objColVals, condition, cb) {
+    updateOne: function (table, objColVals, condition, cb) { // function to updaye the data
         var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
