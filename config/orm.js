@@ -10,6 +10,20 @@ arr.push(key + "=" + ob[key]);
     return arr.toString();
 }
 
+var orm = {
+all: function(tableInput, cb) {
+    var queryString= "Select * From" + tableInput + ";"
+    Connection.query(queryString, function(err, result) {
+        if (err) {
+            throw err;
+        }
+        cb(result);
+    });
+},
+
+
+}
+
 
 
 /*
