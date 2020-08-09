@@ -1,3 +1,12 @@
+
+var express = require("express");
+
+var router = express.Router();
+var burger = require("../models/burger.js");
+
+
+/*
+
 var burger = require('../models/burger.js'); //variables which wil hold the libraries
 var express = require('express');
 
@@ -46,3 +55,4 @@ router.post("/api/burger/:id", function (req, res) { //load the data from the se
 });
 
 module.exports = router;
+*/
