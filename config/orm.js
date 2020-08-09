@@ -1,3 +1,18 @@
+
+function objToSql(ob) {
+
+    var arr = [];
+
+    for (var key in ob) {
+arr.push(key + "=" + ob[key]);
+
+    }
+    return arr.toString();
+}
+
+
+
+/*
 const connection = require('./connection.js'); // connect to the connection folder
 
 var orm = { //data which will be accessed using relationap databses
@@ -73,3 +88,5 @@ function objToSql(ob) {
   }
 
 module.exports = orm;
+
+*/
